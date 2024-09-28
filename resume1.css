@@ -1,0 +1,155 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-color: rgb(253, 254, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    width: 100vw; /* Full width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Column Class */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* Full Container for Grid Layout */
+.full {
+    width: 90%; /* Width now adjusts based on screen size */
+    max-width: 1200px; /* Set a max-width for larger screens */
+    min-height: 100px;
+    background-color: rgb(245, 239, 231);
+    display: grid;
+    grid-template-columns: 2fr 4fr; /* Two columns layout for larger screens */
+    grid-gap: 20px; /* Space between columns */
+    position: relative;
+    top: 200px;
+    
+}
+
+/* Left Column */
+.left {
+    background-color: silver;
+    padding: 20px;
+}
+ 
+/* Right Column */
+.right {
+    background-color: white;
+    padding: 20px;
+}
+
+/* Element Spacing */
+.image, .Contact, .Skills, .Language, .Hobbies, .title, .Education, .project {
+    margin-bottom: 30px;
+}
+
+/* Heading */
+.h2 {
+    background-color: rgb(4, 96, 150);
+    color: white;
+    padding: 10px;
+}
+
+/* Responsive Styles for Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+    }
+
+    .full {
+        grid-template-columns: 1fr; 
+        width: 100%;
+        background-color: transparent; 
+        position: relative;
+        right: 40px;
+        top: 0px;
+        /* Full width on small screens */
+    }
+
+    .left, .right {
+        padding: 15px;
+        width: 100%; /* Ensure the sections fill the screen */
+    }
+
+    .h2 {
+        font-size: 18px; /* Smaller heading font size */
+    }
+}
+
+/* Additional Responsive Styles for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .full {
+        grid-template-columns: 1fr; 
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .left, .right {
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+/* Responsive Styles for Larger Screens */
+@media (min-width: 1024px) {
+    .full {
+        grid-template-columns: 1fr 2fr; /* Adjust grid for larger screens */
+        max-width: 1100px; /* Set max-width for desktops */
+        padding: 30px;
+    }
+
+    .left, .right {
+        padding: 30px;
+    }
+}
+/* DarkMode*/
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.full.dark-mode {
+    background-color: #1e1e1e;
+}
+
+.left.dark-mode, .right.dark-mode {
+    background-color: #000000;
+}
+
+.image img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+h1, h2 {
+    color: rgb(65, 60, 60);
+}
+
+.Contact, .Skills, .Language, .Hobbies, .Education, .project {
+    color: #3a3636;
+}
+.btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.btn button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}

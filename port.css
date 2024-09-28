@@ -1,0 +1,705 @@
+* {
+   margin:0;
+   padding: 0;
+   font-family:sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background:rgb(19, 70, 70);
+
+}
+.header.dark-mode .skill.dark-mode{
+    background:none;
+}
+/* Styles for header section */
+.header {
+   width: 100%;
+   height: 100vh;
+   background:linear-gradient(to right,#161515,darkcyan);
+}
+
+/* Styles for navigation bar */
+nav {
+   top: 0 ;
+   display: flex;
+   margin:auto;
+   width: 100%;
+   height:21%;
+   padding: 10px;
+   align-items: center;
+   justify-content: space-between;
+   position:fixed;
+   z-index: 99;
+   background:linear-gradient(to right,rgb(20, 19, 19),darkcyan);
+}
+nav h2{
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(4, 21, 119);
+    padding: 40px;
+}
+nav ul li {
+   display:inline-block;
+      list-style: none;
+   margin: 10px;
+}
+.context{
+    padding-left: 30px;
+}
+nav ul li a {
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+   font-weight: bolder;
+}
+
+nav ul li a:hover {
+   background-color: seagreen;
+   border-radius: 2px;
+   color: white;
+}
+
+.button-cv, .button-gfc{
+   display: inline-block;
+   margin-left: 0%;
+   border-radius: 5px;
+   transition: background-color 0.5s;
+   background: rgb(241, 236, 236);
+   padding: 10px;
+   text-decoration: none;
+   font-weight: bold;
+   color: white;
+   border: none;
+   cursor: pointer;
+}
+
+.button-cv:hover {
+   background-color: white;
+   color:black;
+}
+
+.button-gfc{
+   background: lightsalmon;
+}
+.header.dark-mode .skill.dark-mode{
+    background: linear-gradient(to right, #1a1a1a, #2b2b2b);
+    color: red;
+
+}
+
+.button-gfc:hover {
+   background-color: white;
+   color:black;
+}
+
+/* Styles for body section */
+.body {
+   margin-left: 100px;
+   margin-top: 100px;
+   padding:10px;
+}
+.context{
+    margin-top: 150px;
+    padding: 50px;
+    padding-bottom:150px;
+
+}
+.typing-demo{
+    color:pink;
+}
+.para{
+    font-weight: bold;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif; 
+    width:35%;
+    height:35%;  
+}   
+.icon a{
+    color:rgb(2, 2, 2);
+    font-size: 36px;
+    padding: 10px;
+}
+.icon a :hover{
+    background-color:white;
+}
+
+.body h1 {
+   font-size: 30px;
+   color: black;
+   margin-bottom: 20px;
+}
+
+.button-lrn, .button-hire{
+   background: rgb(54, 143, 42);
+   padding: 10px 12px;
+   text-decoration: none;
+   font-weight: bold;
+   color: whitesmoke;
+   display: inline-block;
+   margin: 30px 8px;
+   border-radius: 5px;
+   transition: background-color 0.3s;
+   border: none;
+   letter-spacing: 1px;
+   cursor: pointer;
+}
+
+.button-lrn:hover {
+   background-color: whitesmoke;
+   color: black;
+}
+
+.button-hire {
+   background: black;
+}
+
+.button-hire:hover {
+   background-color: seagreen;
+}
+
+.span {
+   color:seagreen;
+}
+.about.dark-mode,
+.resume.dark-mode,
+.skill.dark-mode,
+.projects.dark-mode,
+.contact.dark-mode {
+    background-color: #1a1a1a;
+    color: #ddd;
+}
+/* Styles for image section */
+.image {
+   width: 45%;
+   height: 100%;
+   position: absolute;
+   bottom: 0;
+   right: 100px;
+}
+
+.image img {
+   height: 45%;
+   width: 45%;
+   position:absolute;
+   left: 80%;
+   bottom:18%;
+   border-radius: 50%;
+   overflow: hidden;
+   border: 15px solid white;
+   box-shadow: 5px 7px 25px black;
+   transform: translate(-60%);
+}
+/* About Section */
+.about {
+    padding: 4rem 0;
+    background:linear-gradient(to right,#242323,darkcyan);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1;
+    padding:20px;
+}
+
+.about-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border:15px solid gray;
+    object-fit: cover;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2); /* Add a shadow to the image */
+}
+
+.about-text {
+    flex: 2;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif; /* Custom font style */
+    text-align: left;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Mobile responsive for About section */
+@media only screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+/* Resume section styles */
+.resume {
+    padding:150px;
+    background:linear-gradient(to right,#242323,darkcyan);
+    text-align:left;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.resume-heading {
+    margin-bottom: 2rem;
+}
+/* skill Section style*/
+
+
+#skills{
+    padding: 5rem 0;
+    /* background:linear-gradient(to right,#A9F1DF,); */
+    background:rgb(19, 70, 70);
+    text-align: center;
+}
+#skills h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+#skills h3{
+    padding-left: 40%;
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    font-weight: bold;
+    font-size:medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#skills .icon a{
+        color:rgb(0, 0, 0);
+        font-size: 46px;
+        display: flex;
+        gap: 30px;
+        align-items:xsilver;
+        justify-content: center;
+}
+#skills .icon a :hover{
+    background-color:#ffffff;
+}
+
+/* Project Section */
+.projects {
+    background:linear-gradient(to right,rgb(31, 28, 28),darkcyan);
+    padding: 5rem 0;
+    text-align: center;
+    padding-top: 10%;
+    height: 10px;
+    width: 20px;
+}
+.projects-heading h1 {
+    /* background:linear-gradient(to right,#A9F1DF,#FFBBBB); */
+    font-size:25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
+    text-align: center;
+} 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 10%;
+    font-size:10px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:blue;
+}
+
+.project-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    background-color: pink;
+}
+
+.project-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color:dimgrey
+}
+/* Contact section styles */
+.contact {
+    padding: 0 5rem;
+}
+.contact-content {
+    display: flex;
+    margin: 3rem 0;
+    justify-content: space-between;
+}
+.contact-content{
+    color: #222;
+}
+.contact-form-container {
+    width: 50%;
+    margin: 5rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.form-controls, .form-controls1, .form-controls2 {
+    padding: 10px;
+    margin: 1rem 0;
+    border: 1px solid #ccc; /* Optional for better visibility */
+    border-radius: 5px;
+    width: 380px;
+}
+#nametag{
+    width: 395px;
+}
+
+.contact-form .form-controls {
+    width: 80%;
+    padding: 10px 0;
+    margin: 1.67rem 0;
+}
+.form-controls2{
+    resize: none;
+}
+.contact-details {
+    width: 50%;
+    margin-top: 90px;
+    margin-right: 90px;
+}
+.btn{
+    width: 250px;
+    position: relative;
+    left: 60px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color:rgb(44, 122, 37) ;
+    color:rgb(244, 244, 245);
+}
+.btn:hover{
+    background-color: palevioletred;
+}
+span{
+    color:red;
+}
+.messageerror{
+    margin-bottom: 10px;
+}
+/* Footer Styles */
+.footer {
+    background:linear-gradient(to right,black,darkcyan);
+    color: #9a33ca;
+    padding: 2rem;
+}
+
+.footer-list-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px; 
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 50%;
+    background-color: #53C8B6;
+}
+
+.footer-links {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-menu {
+    padding: 0 5rem;
+}
+
+.footer-menu .footer-menu-list {
+    display: flex;
+    list-style: none;
+}
+/* darkmode style*/
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+.header.dark-mode {
+    background: linear-gradient(to right, #1a1a1a, #2b2b2b);
+}
+
+nav.dark-mode {
+    background: linear-gradient(to right, #1a1a1a, #2b2b2b);
+}
+
+.button-lrn.dark-mode,
+.button-resume.dark-mode {
+    background: #444;
+}
+nav li button{
+    padding:5px;
+    border-radius:20px;
+}
+.footer.dark-mode {
+    background: linear-gradient(to right, #1a1a1a, #2b2b2b);
+}
+
+.skill .icon a.dark-mode {
+    color: white;
+}
+/* Dark mode for about section */
+.about.dark-mode {
+    background: linear-gradient(to right, #1a1a1a, #2b2b2b);
+    color: white; /* For text color */
+}
+
+.about-text.dark-mode h1,
+.about-text.dark-mode p {
+    color: #ddd;
+}
+
+/* Dark mode for resume section */
+.resume.dark-mode {
+    background: linear-gradient(to right, #1a1a1a, #2b2b2b);
+    color: white;
+}
+
+.resume-heading.dark-mode h1,
+.resume-content.dark-mode {
+    color: #ddd;
+}
+
+/* Dark mode for buttons */
+.button-lrn.dark-mode,
+.button-resume.dark-mode {
+    background-color: #444;
+    color: white;
+}
+
+.button-lrn.dark-mode:hover,
+.button-resume.dark-mode:hover {
+    background-color: #888;
+}
+/* Dark mode for Skill Section */
+.header.dark-mode .skill   {
+    background-color: #1a1a1a; /* Dark background */
+color: red;}
+
+/* text animation style*/
+    .wrapper {
+        height: 30vh;
+        /*This part is important for centering*/
+        display: grid;
+        place-items:left;
+      }
+      .typing-demo {
+        width:30ch;
+        animation: typing 2s steps(25), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        font-family: monospace;
+        font-size: 2em;
+      }
+      
+      @keyframes typing {
+        from {
+          width: 0
+        }
+      }
+          
+      @keyframes blink {
+        0% {
+          border-color: transparent
+        }
+      }
+/* Media query for mobile screens */
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        height: auto;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .context, .image {
+        padding: 10px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .para {
+        width: 90%; /* Adjust to full width for mobile */
+        font-size: small;
+        margin: 10px auto;
+    }
+
+    .icon a {
+        font-size: 28px;
+        padding: 5px;
+    }
+
+    .image img {
+        width: 60%;
+        height: auto;
+        border-width: 8px;
+    }
+
+    .resume-content {
+        width: 90%;
+    }
+
+    .contact-form-container, .contact-details {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .form-controls, .form-controls1, .form-controls2 {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Footer adjustments */
+    .footer-menu .footer-menu-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-list-items {
+        margin: 10px 0;
+    }
+}
+/* fade animation*/
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+.projects.dark-mode {
+    background: linear-gradient(to right, #1a1a1a, #333); /* Dark background for projects */
+    color: #ddd; /* Light text */
+}
+
+.project-item.dark-mode {
+    background-color: #444; /* Dark background for individual project cards */
+    color: #ddd; /* Light text for project cards */
+}
+
+.project-item.dark-mode:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
+/* Dark mode for contact section */
+.contact.dark-mode {
+    background-color: #1a1a1a; /* Dark background for contact section */
+    color: white; /* Light text */
+}
+
+.contact-form-container.dark-mode {
+    background-color: #222; /* Slightly darker background for form container */
+    color: white; /* Light text for form */
+}
+
+.contact-form-container.dark-mode h1 {
+    color: white;
+}
+
+.contact-form .form-controls.dark-mode,
+.contact-form .form-controls1.dark-mode,
+.contact-form .form-controls2.dark-mode {
+    background-color: #333; /* Dark input background */
+    color: white; /* Light text */
+    border: 1px solid #555; /* Light border */
+}
+
+.contact-form .btn.dark-mode {
+    background-color: #555; /* Dark background for buttons */
+    color: white; /* Light text for buttons */
+}
+
+.contact-details.dark-mode {
+    color: white; /* Light text for contact details */
+}
+
+.contact-form .btn.dark-mode:hover {
+    background-color: #888; /* Lighter background on hover */
+}
+
+/* Additional dark mode styling for h1, label, and p inside the contact section */
+.contact-content.dark-mode h1,
+.contact-content.dark-mode label,
+.contact-content.dark-mode p {
+    color: white; /* Ensure text for headings, labels, and paragraphs is white in dark mode */
+}
+/* Dark mode for footer */
+.footer.dark-mode {
+    background-color: #1a1a1a; /* Dark background for footer */
+    color: white; /* Light text */
+}
+
+/* Dark mode for the skill section */
+#skills.dark-mode {
+    background-color: #222; /* Dark background */
+    color: white; /* Light text */
+}
+
+/* Dark mode for icons */
+.icon a.dark-mode {
+    color: white; /* Light icon color */
+}
